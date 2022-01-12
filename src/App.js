@@ -6,23 +6,18 @@ function App() {
 
   const ops = ['/', '*', '+', '-', '.'];
 
-  // eslint-disable-next-line no-unused-vars
   const updateCalc = value => {
 
     if (
-      // eslint-disable-next-line no-mixed-operators
       ops.includes(value) && calc === '' ||
-      // eslint-disable-next-line no-mixed-operators
       ops.includes(value) && ops.includes(calc.slice(-1))
 
       ) 
       return;
-  // eslint-disable-next-line no-lone-blocks
   {
     setCalc(calc + value);
 
     if (!ops.includes(value)) {
-      // eslint-disable-next-line no-eval
       setResult(eval(calc + value).toString);
     }
   }
@@ -66,6 +61,6 @@ function App() {
     </div>
   );
 }
-}
+
 
 export default App;
